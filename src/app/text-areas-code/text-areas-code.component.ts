@@ -58,9 +58,10 @@ export class TextAreasCodeComponent implements OnInit {
       try {
 
         /**
+         * @important
          * @Here I tried to sanitize the code against attacks 
-         * and the NgDompurifySanitizer has the support  by by accepting script but runtime it says that 
-         * NgDompurifySanitizer does not support script
+         * and the @NgDompurifySanitizer has the support  by by accepting script but runtime it says that 
+         * @NgDompurifySanitizer does not support script
          */
         // const sanitizeJsCode = this.purifyCode(code);
         const sanitizeJsCode = eval(code);
